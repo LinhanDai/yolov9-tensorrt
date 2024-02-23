@@ -6,9 +6,10 @@
 This repository provides an API for accelerating inference deployment, with two open interface forms: C++ and Python. C++also provides the use of CUDA programming to accelerate YOLOv9 model preprocessing and post-processing
 to pursue faster model inference speed🔥🔥🔥
 
-<center>
- <img width="600" alt="teaser" src="result/performance.png">
-</center>
+<p align="center">
+<img width="700" alt="teaser" src="result/performance.png">
+</p>
+
 </h3>
 
 ## ⭐ Build
