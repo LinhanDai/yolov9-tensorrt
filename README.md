@@ -2,8 +2,7 @@
 <h2> YOLOv9 tensorrt deployment </h2>
 </center>
 
-<h3>This repository provides an API for accelerating [YOLOv9](https://github.com/WongKinYiu/yolov9)
-inference deployment, with two open interface forms: C++and Python. C++also provides the use of CUDA programming to accelerate YOLOv9 model preprocessing and post-processing </h3>
+<h3>This repository provides an API for accelerating [YOLOv9](https://github.com/WongKinYiu/yolov9)inference deployment, with two open interface forms: C++and Python. C++also provides the use of CUDA programming to accelerate YOLOv9 model preprocessing and post-processing </h3>
 
 ## Build
 
@@ -17,11 +16,6 @@ python export.py --weights yolov9-c.pt --simplify --include "onnx"
 ```
 
 <h3> 2. Setup </h3>
-
-``` shell
-# export onnx
-python export.py --weights yolov9-c.pt --simplify --include "onnx"
-```
 
 Place the exported onnx file in the "yolov9-tensorrt/configs" folder and configure the relevant parameters through the "yolov9-tensorrt/configs/yolov9.yaml" file
 ``` shell
