@@ -5,9 +5,11 @@
 <h3>
 This repository provides an API for accelerating inference deployment, with two open interface forms: C++ and Python. C++also provides the use of CUDA programming to accelerate YOLOv9 model preprocessing and post-processing
 🔥🔥🔥
+
+![performance.png](result%2Fperformance.png)
 </h3>
 
-## Build
+## ⭐ Build
 
 <h3> 1. Export onnx </h3>
 
@@ -51,7 +53,7 @@ cmake ..
 make -j4
 ```
 
-## Run demo
+## 🌠 Run demo
 The first run will generate the inference engine ".engine" file in the configs folder. If the inference engine has already been generated, it will not be generated again
 ``` shell
 # run images floder
@@ -67,3 +69,14 @@ The first run will generate the inference engine ".engine" file in the configs f
 This project is based on the following awesome projects:
 - [Yolov9](https://github.com/WongKinYiu/yolov9) - YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information.
 - [TensorRT](https://github.com/NVIDIA/TensorRT/tree/release/8.6/samples) - TensorRT samples and api documentation.
+
+## 🤗 Citation
+
+```bibtex
+@article{wang2024yolov9,
+  title={{YOLOv9}: Learning What You Want to Learn Using Programmable Gradient Information},
+  author={Wang, Chien-Yao  and Liao, Hong-Yuan Mark},
+  booktitle={arXiv preprint arXiv:2402.13616},
+  year={2024}
+}
+```
