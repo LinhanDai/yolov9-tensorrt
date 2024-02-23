@@ -210,7 +210,7 @@ void YoloV9::getTrtmodelStream()
     mTrtModelStream = nullptr;
 }
 
-void YoloV9::getAffineMartrix(AffineMatrix &afmt,cv::Size &to,cv::Size &from)  //计算放射变换的正矩阵和逆矩阵
+void YoloV9::getAffineMartrix(AffineMatrix &afmt,cv::Size &to,cv::Size &from)
 {
     float scale = std::min(to.width/(float)from.width,to.height/(float)from.height);
     afmt.i2d[0] = scale;
@@ -221,7 +221,7 @@ void YoloV9::getAffineMartrix(AffineMatrix &afmt,cv::Size &to,cv::Size &from)  /
     afmt.i2d[5] = (-scale * from.height + to.height) * 0.5;
     cv::Mat  cv_i2d(2,3,CV_32F,afmt.i2d);
     cv::Mat  cv_d2i(2,3,CV_32F,afmt.d2i);
-    cv::invertAffineTransform(cv_i2d,cv_d2i);         //通过opencv获取仿射变换逆矩阵
+    cv::invertAffineTransform(cv_i2d,cv_d2i);
     memcpy(afmt.d2i,cv_d2i.ptr<float>(0),sizeof(afmt.d2i));
 }
 
@@ -290,7 +290,7 @@ void YoloV9::modelInfer(nvinfer1::IExecutionContext& context, int batchSize)
     d.d[0] = batchSize;
     if (!mContext->setBindingDimensions(0, d))
     {
-        mLogger.logPrint(Severity::kERROR, __FUNCTION__ , __LINE__, "模型输入维度不正确");
+        mLogger.logPrint(Severity::kERROR, __FUNCTION__ , __LINE__, "The input dimension of the model is incorrect");
         std::abort();
     }
     context.enqueueV2((void **)mBuff, mStream, nullptr);
