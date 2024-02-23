@@ -1,0 +1,5 @@
+.idea/
+build/
+cmake-build-debug/
+configs/*.engine
+configs/*.onnx

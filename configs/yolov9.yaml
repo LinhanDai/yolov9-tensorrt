@@ -1,0 +1,8 @@
+%YAML:1.0
+---
+confTreshold: 0.25              #Detection confidence threshold
+nmsTreshold : 0.45               #nms threshold
+maxSupportBatchSize: 1          #support max input batch size
+quantizationInfer: "FP16"       #support FP32 or FP16 quantization
+onnxFile: "yolov9-c.onnx"       # The currently used onnx model file
+engineFile: "yolov9-c.engine"   # Automatically generate file names for the Tensorrt inference engine
