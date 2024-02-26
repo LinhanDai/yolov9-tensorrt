@@ -51,12 +51,30 @@ cd build
 cmake ..
 make -j4
 ```
+<h3> 4. python API </h3>
+Modify parameter configuration in configs/yolov9py-yaml
+
+``` shell
+# modify configuration in configs/yolov9py.yaml
+confTreshold: 0.3               # detect treshold
+nmsThreshold: 0.45              #nms treshold
+quantizationInfer: "FP16"       #FP32 or FP16
+onnxFile: "yolov9-c.onnx"       # The currently used onnx model file
+engineFile: "yolov9-c.engine"   # Automatically generate file names for the Tensorrt inference engine
+```
 
 ## 🌠 Run demo
 The first run will generate the inference engine ".engine" file in the configs folder. If the inference engine has already been generated, it will not be generated again
+
+run c++ demo API
 ``` shell
 # run images floder
 ./demo ../data
+```
+run python demo API
+``` shell
+# run images floder
+python yolov9_trt.py --configs configs --yaml_file yolov9py.yaml --data data
 ```
 <div align="center">
 
