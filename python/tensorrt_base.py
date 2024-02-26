@@ -5,8 +5,8 @@ import tensorrt as trt
 class TensorrtBase(object):
     def __init__(self, logger):
         '''
-        初始化构建tensorrt的基类
-        :param logger: 日志系统
+        Initialize the base class for building tensorrt
+        :param logger: Logging system
         '''
         self.logger = logger
         self.trt_logger = trt.Logger(trt.Logger.WARNING)
@@ -16,8 +16,8 @@ class TensorrtBase(object):
 
     def create_engine_if_not_exit(self):
         '''
-        如果推理引擎不存在就进行创建
-        :return: 推理引擎是否创建成功
+        If the inference engine does not exist, create it
+        :return: Whether the inference engine was successfully created
         '''
         serialized_model = None
         if os.path.exists(self.engine_file):
@@ -34,9 +34,9 @@ class TensorrtBase(object):
     def create_engine(self, builder, config):
         '''
         创建推理引擎
-        :param builder: trt构建
-        :param config:  trt配置
-        :return:        推理引擎
+        :param builder: TRT construction
+        :param config:  TRT configuration
+        :return:        Inference engine
         '''
         explicitBatch = (1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
         network = builder.create_network(explicitBatch)
