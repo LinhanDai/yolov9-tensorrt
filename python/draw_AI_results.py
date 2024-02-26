@@ -5,7 +5,7 @@ from python.AIResult import *
 #Generic paint color
 colors = list()
 while len(colors) < 100:
-    # 随机生成RGB颜色值
+    # Randomly generate RGB color values
     b = random.randint(0, 255)
     g = random.randint(0, 255)
     r = random.randint(0, 255)

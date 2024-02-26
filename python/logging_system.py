@@ -46,7 +46,7 @@ class Logger(object):
         return file_handler
 
     def get_formatter(self):
-        """格式器"""
+        """Formatter"""
         console_fmt = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(module)s,%(funcName)s: %(message)s')
         file_fmt = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(module)s,%(funcName)s: %(message)s')
         # Returns a tuple

@@ -33,7 +33,7 @@ class TensorrtBase(object):
 
     def create_engine(self, builder, config):
         '''
-        创建推理引擎
+        Create inference engine
         :param builder: TRT construction
         :param config:  TRT configuration
         :return:        Inference engine
