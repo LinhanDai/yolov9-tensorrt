@@ -3,3 +3,5 @@ build/
 cmake-build-debug/
 configs/*.engine
 configs/*.onnx
+python/__pycache__/
+logs/

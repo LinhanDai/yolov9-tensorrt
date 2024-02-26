@@ -1,0 +1,7 @@
+%YAML:1.0
+---
+confTreshold: 0.3               # detect treshold
+nmsThreshold: 0.45               #nms treshold
+quantizationInfer: "FP16"       #FP32 or FP16
+onnxFile: "yolov9-c.onnx"
+engineFile: "yolov9-c.engine"

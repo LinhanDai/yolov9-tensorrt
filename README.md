@@ -34,10 +34,6 @@ mv yolov9-c.onnx ./configs
 
 Modify parameter configuration in configs/yolov9-yaml
 ``` shell
-# move onnx
-cd yolov9-tensorrt
-mv yolov9-c.onnx ./configs
-
 # modify configuration in configs/yolov9.yaml
 confTreshold: 0.25              #Detection confidence threshold
 nmsTreshold : 0.45              #nms threshold
